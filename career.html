@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareerAI | Career Details</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+    <div class="logo">CareerAI</div>
+
+    <ul>
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="dashboard.html">Dashboard</a>
+        </li>
+
+        <li>
+            <a href="career.html">Careers</a>
+        </li>
+
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+    <!-- Career Introduction -->
+
+    <section class="hero">
+
+    <h1 id="careerTitle">Career Details</h1>
+
+    <p id="careerDescription">
+        Explore the skills, learning roadmap, and opportunities
+        associated with your recommended career.
+    </p>
+
+</section>
+
+
+    <!-- Career Details -->
+
+    <section class="features">
+
+    <h2>Career Details</h2>
+
+    <div class="feature-container">
+
+        <!-- Required Skills -->
+        <div class="card">
+
+            <h3>🎯 Required Skills</h3>
+
+            <p id="careerSkills">
+                Python<br>
+                Machine Learning<br>
+                Deep Learning<br>
+                SQL<br>
+                Data Structures<br>
+                Problem Solving
+            </p>
+
+        </div>
+
+
+        <!-- Learning Roadmap -->
+        <div class="card">
+
+            <h3>🗺️ Learning Roadmap</h3>
+
+            <p id="careerRoadmap">
+                Programming → Data Structures → Machine Learning → Projects
+            </p>
+
+        </div>
+
+
+        <!-- Recommended Learning -->
+        <div class="card">
+
+            <h3>📚 Recommended Learning</h3>
+
+            <p id="careerCourses">
+                Python Programming<br>
+                Machine Learning Fundamentals<br>
+                Data Science Basics
+            </p>
+
+        </div>
+
+
+        <!-- Career Opportunities -->
+        <div class="card">
+
+            <h3>💼 Career Opportunities</h3>
+
+            <p id="careerOpportunities">
+                AI Engineer<br>
+                Machine Learning Engineer<br>
+                Data Scientist
+            </p>
+
+        </div>
+
+
+        <!-- Soft Skills -->
+        <div class="card">
+
+            <h3>🤝 Important Soft Skills</h3>
+
+            <p id="careerSoftSkills">
+                Analytical Thinking<br>
+                Communication<br>
+                Problem Solving<br>
+                Teamwork<br>
+                Continuous Learning
+            </p>
+
+        </div>
+
+
+        <!-- Salary -->
+        <div class="card">
+
+            <h3>💰 Salary Information</h3>
+
+            <p id="careerSalary">
+                Salary varies based on skills,
+                experience, organization, and location.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <br>
+    <br>
+
+
+    <!-- Guidance Button -->
+
+    <a href="contact.html" class="btn">
+        Get Career Guidance
+    </a>
+
+</section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 CareerAI | Empowering Students for Their Future
+        </p>
+
+    </footer>
+
+    <script>
+    window.addEventListener("DOMContentLoaded", function () {
+
+        let savedCareer = localStorage.getItem("recommendedCareer");
+
+        let careerTitle = document.getElementById("careerTitle");
+        let careerDescription = document.getElementById("careerDescription");
+
+        let careerSkills = document.getElementById("careerSkills");
+        let careerRoadmap = document.getElementById("careerRoadmap");
+        let careerCourses = document.getElementById("careerCourses");
+        let careerOpportunities = document.getElementById("careerOpportunities");
+        let careerSoftSkills = document.getElementById("careerSoftSkills");
+        let careerSalary = document.getElementById("careerSalary");
+
+
+        if (!savedCareer) {
+            return;
+        }
+
+
+        careerTitle.textContent = savedCareer;
+
+        careerDescription.textContent =
+            "Explore the skills, learning roadmap, and career opportunities related to " +
+            savedCareer + ".";
+
+
+        if (savedCareer === "AI Engineer") {
+
+            careerSkills.innerHTML =
+                "Python<br>Machine Learning<br>Deep Learning<br>SQL<br>Data Structures<br>Problem Solving";
+
+            careerRoadmap.innerHTML =
+                "Python → Data Structures → Machine Learning → Deep Learning → AI Projects";
+
+            careerCourses.innerHTML =
+                "Python Programming<br>Machine Learning Fundamentals<br>Deep Learning<br>Cloud Computing";
+
+            careerOpportunities.innerHTML =
+                "AI Engineer<br>Machine Learning Engineer<br>AI Application Developer<br>Research Engineer";
+
+            careerSoftSkills.innerHTML =
+                "Analytical Thinking<br>Problem Solving<br>Communication<br>Teamwork<br>Continuous Learning";
+
+            careerSalary.textContent =
+                "Salary varies based on skills, experience, organization, and location.";
+
+        }
+
+
+        else if (savedCareer === "Data Scientist") {
+
+            careerSkills.innerHTML =
+                "Python<br>SQL<br>Statistics<br>Data Analysis<br>Machine Learning<br>Data Visualization";
+
+            careerRoadmap.innerHTML =
+                "Python → SQL → Statistics → Data Analysis → Machine Learning → Projects";
+
+            careerCourses.innerHTML =
+                "Python for Data Science<br>SQL<br>Statistics<br>Data Analytics<br>Machine Learning";
+
+            careerOpportunities.innerHTML =
+                "Data Scientist<br>Data Analyst<br>Machine Learning Engineer<br>Business Intelligence Analyst";
+
+            careerSoftSkills.innerHTML =
+                "Analytical Thinking<br>Communication<br>Problem Solving<br>Attention to Detail<br>Teamwork";
+
+            careerSalary.textContent =
+                "Salary varies based on skills, experience, organization, and location.";
+
+        }
+
+
+        else if (savedCareer === "Web Developer") {
+
+            careerSkills.innerHTML =
+                "HTML<br>CSS<br>JavaScript<br>Responsive Design<br>Git<br>Frontend Development";
+
+            careerRoadmap.innerHTML =
+                "HTML → CSS → JavaScript → Responsive Design → Git → Web Projects";
+
+            careerCourses.innerHTML =
+                "HTML & CSS<br>JavaScript<br>Frontend Development<br>Web Design<br>Git & GitHub";
+
+            careerOpportunities.innerHTML =
+                "Frontend Developer<br>Web Developer<br>UI Developer<br>Full Stack Developer";
+
+            careerSoftSkills.innerHTML =
+                "Creativity<br>Problem Solving<br>Communication<br>Teamwork<br>Attention to Detail";
+
+            careerSalary.textContent =
+                "Salary varies based on skills, experience, organization, and location.";
+
+        }
+
+
+        else if (savedCareer === "Software Developer") {
+
+            careerSkills.innerHTML =
+                "Programming<br>Data Structures<br>Algorithms<br>SQL<br>Object-Oriented Programming<br>Problem Solving";
+
+            careerRoadmap.innerHTML =
+                "Programming → Data Structures → Algorithms → Databases → Projects → Interview Preparation";
+
+            careerCourses.innerHTML =
+                "Programming Fundamentals<br>Data Structures<br>Algorithms<br>SQL<br>Software Engineering";
+
+            careerOpportunities.innerHTML =
+                "Software Developer<br>Backend Developer<br>Application Developer<br>Software Engineer";
+
+            careerSoftSkills.innerHTML =
+                "Problem Solving<br>Communication<br>Teamwork<br>Logical Thinking<br>Continuous Learning";
+
+            careerSalary.textContent =
+                "Salary varies based on skills, experience, organization, and location.";
+
+        }
+
+
+        else if (savedCareer === "Cloud Engineer") {
+
+            careerSkills.innerHTML =
+                "Cloud Computing<br>Networking<br>Linux<br>Operating Systems<br>Security<br>Deployment";
+
+            careerRoadmap.innerHTML =
+                "Networking → Linux → Cloud Fundamentals → Cloud Platform → Deployment → Projects";
+
+            careerCourses.innerHTML =
+                "Cloud Fundamentals<br>AWS or Azure<br>Linux<br>Networking<br>Cloud Security";
+
+            careerOpportunities.innerHTML =
+                "Cloud Engineer<br>Cloud Developer<br>Cloud Support Engineer<br>DevOps Engineer";
+
+            careerSoftSkills.innerHTML =
+                "Problem Solving<br>Communication<br>Teamwork<br>Analytical Thinking<br>Continuous Learning";
+
+            careerSalary.textContent =
+                "Salary varies based on skills, experience, organization, and location.";
+
+        }
+
+    });
+</script>
+
+
+</body>
+
+</html>

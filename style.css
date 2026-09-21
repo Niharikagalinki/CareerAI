@@ -1,0 +1,327 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#111827;
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:18px;
+    line-height:1.8;
+    color:#d1d5db;
+    margin-bottom:35px;
+}
+
+.btn{
+    text-decoration:none;
+    padding:15px 35px;
+    background:#38bdf8;
+    color:white;
+    border-radius:30px;
+    transition:.3s;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#0ea5e9;
+    transform:translateY(-5px);
+}
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero h1{
+    font-size:2.3rem;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+}
+
+.features,
+.about,
+.testimonials{
+
+padding:80px 10%;
+text-align:center;
+
+}
+
+.features h2,
+.about h2,
+.testimonials h2{
+
+font-size:2.5rem;
+margin-bottom:40px;
+color:#38bdf8;
+
+}
+
+.feature-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+
+}
+
+.card{
+
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+
+}
+
+.card p{
+
+color:#d1d5db;
+
+}
+
+.about p{
+
+max-width:800px;
+margin:auto;
+line-height:1.8;
+color:#d1d5db;
+
+}
+
+footer{
+
+background:#111827;
+padding:25px;
+text-align:center;
+margin-top:50px;
+
+}
+
+.contact-form{
+
+max-width:700px;
+margin:auto;
+
+display:flex;
+flex-direction:column;
+gap:20px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:16px;
+
+}
+
+.contact-form textarea{
+
+resize:none;
+
+}
+
+/* =========================
+   CAREER ASSESSMENT
+========================= */
+
+.assessment {
+    padding: 80px 10%;
+    text-align: center;
+    background: #111827;
+}
+
+.assessment h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+.assessment > p {
+    color: #d1d5db;
+    margin-bottom: 40px;
+    font-size: 17px;
+}
+
+.assessment-form {
+    max-width: 600px;
+    margin: auto;
+    background: #1e293b;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.assessment-form label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.assessment-form label:first-child {
+    margin-top: 0;
+}
+
+.assessment-form select {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    background: white;
+    color: #111827;
+    cursor: pointer;
+}
+
+.assessment-form select:focus {
+    outline: 2px solid #38bdf8;
+}
+
+.assessment-form .btn {
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* Career Recommendation Result */
+
+.career-result {
+    max-width: 600px;
+    margin: 30px auto 0;
+    text-align: center;
+    border: 1px solid #38bdf8;
+}
+
+.career-result h3 {
+    color: #38bdf8;
+}
+
+.career-result h2 {
+    margin: 15px 0;
+    font-size: 2rem;
+}
+
+.career-result p {
+    line-height: 1.7;
+    color: #d1d5db;
+}
+.card p {
+    line-height: 1.8;
+}
+
+.card-button {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.card-button .btn {
+    display: inline-block;
+    padding: 15px 35px;
+    white-space: nowrap;
+}
+
+/* Career Details - 3 cards per row */
+
+.features .feature-container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+
+    .features .feature-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .features .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+}

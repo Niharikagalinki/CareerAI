@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerAI Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">CareerAI</div>
+
+    <ul>
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="dashboard.html">Dashboard</a>
+        </li>
+
+        <li>
+            <a href="career.html">Careers</a>
+        </li>
+
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+<section class="hero">
+
+<h1>Welcome, Student 👋</h1>
+
+<p>
+Explore your personalized dashboard and discover the best career opportunities,
+courses, and internships tailored to your interests.
+</p>
+
+</section>
+
+<!-- Career Assessment -->
+<section class="assessment">
+
+    <h2>Career Assessment</h2>
+
+    <p>
+        Tell us about your interests and skills to discover suitable career paths.
+    </p>
+
+    <div class="assessment-form">
+
+        <label for="interest">Area of Interest</label>
+
+        <select id="interest">
+            <option value="">Select an interest</option>
+            <option value="ai">Artificial Intelligence</option>
+            <option value="data">Data & Analytics</option>
+            <option value="web">Web Development</option>
+            <option value="software">Software Development</option>
+            <option value="cloud">Cloud Computing</option>
+        </select>
+
+
+        <label for="skill">Primary Skill</label>
+
+        <select id="skill">
+            <option value="">Select your strongest skill</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="sql">SQL</option>
+            <option value="htmlcss">HTML & CSS</option>
+            <option value="problem-solving">Problem Solving</option>
+        </select>
+
+
+        <label for="goal">Career Goal</label>
+
+        <select id="goal">
+            <option value="">Select your career goal</option>
+            <option value="development">Build Software</option>
+            <option value="data">Work with Data</option>
+            <option value="ai">Build AI Solutions</option>
+            <option value="cloud">Work with Cloud Technologies</option>
+        </select>
+
+
+        <button class="btn" onclick="generateCareer()">
+            Get Career Recommendation
+        </button>
+
+    </div>
+
+</section>
+
+<section class="features">
+
+    <h2>Your Dashboard</h2>
+
+    <div class="feature-container">
+
+        <div class="card">
+            <h3>🎯 Career Recommendations</h3>
+
+            <p id="dashboardCareer">
+                Complete the Career Assessment to receive a recommendation.
+            </p>
+
+            <div class="card-button">
+                <a href="career.html" class="btn">
+                    View Career Details
+                </a>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <h3>📚 Recommended Skills</h3>
+
+            <p>
+                Python<br>
+                Machine Learning<br>
+                SQL<br>
+                Data Structures
+            </p>
+        </div>
+
+
+        <div class="card">
+            <h3>💼 Career Preparation</h3>
+
+            <p>
+                Build Projects<br>
+                Complete Courses<br>
+                Practice Coding<br>
+                Apply for Internships
+            </p>
+        </div>
+
+
+        <div class="card">
+            <h3>📈 Preparation Tracker</h3>
+
+            <p>
+                Career Assessment: Completed<br>
+                Skills Identified: 4<br>
+                Learning Path: Available
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+<p>© 2026 CareerAI</p>
+
+</footer>
+<script src="script.js"></script>
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+
+        let savedCareer = localStorage.getItem("recommendedCareer");
+
+        if (savedCareer) {
+            console.log("Saved Career Recommendation:", savedCareer);
+        }
+
+    });
+</script>
+
+</body>
+</html>
