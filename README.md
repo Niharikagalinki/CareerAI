@@ -1,14 +1,25 @@
 # CareerAI – Personalized Career Guidance Web Application
 
+## Live Demo
+
+🔗 [View CareerAI Live](https://niharikagalinki.github.io/CareerAI/)
+
 ## Project Description
 
 CareerAI is a web-based career guidance application designed to help students explore suitable career paths based on their interests, skills, and career goals.
 
 The application provides a career assessment, personalized career recommendations, required skills, learning roadmaps, recommended learning areas, and career preparation guidance.
 
-## Live Demo
+## Screenshots
 
-Add your GitHub Pages link here after deployment.
+### Home Page
+![CareerAI Home Page](screenshots/home.png)
+
+### Dashboard
+![CareerAI Dashboard](screenshots/dashboard.png)
+
+### Career Details
+![CareerAI Career Details](screenshots/career-details.png)
 
 ## Features
 
